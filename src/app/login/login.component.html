@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <form class="form-signin">
+    <h2 class="form-signin-heading">Please login</h2>
+    <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus=""
+      [(ngModel)]="userName" />
+    <input type="password" class="form-control" name="password" placeholder="Password" required=""
+      [(ngModel)]="password" />
+    <button class="btn btn-lg btn-primary btn-block" type="button" (click)="login()">Login</button>
+    <div class="row m-t-sm">
+      <div class="col-md-6"><span class="errorTxt" *ngIf="loginError">Login failed !!</span></div>
+      <div class="col-md-6 text-right"><a routerLink="/sign-up">Sign up</a></div>
+    </div>
+  </form>
+</div>

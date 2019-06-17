@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-12 text-right">Welcome, {{loggedInUser}} !</div>
+  <div class="col-md-12 text-right"><a class="logout" (click)="logout()">Logout</a></div>
+
+  <div class="col-md-12 m-t-md">
+    <div class="row" *ngIf="gitUsers">
+      <div class="col-md-12" *ngFor="let gitUser of gitUsers">
+        <div class="media">
+          <div class="media-left">
+            <img class="media-object" src={{gitUser.avatar_url}} alt="...">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">{{gitUser.login}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div>
